@@ -1,0 +1,23 @@
+<head>
+  <title>Slak</title>
+</head>
+
+<template name="messages">
+  {{> channels}}
+
+  <h2>#{{channel.name}}</h2>
+
+  <ul>
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </ul>
+
+  <form>
+    <input type="text" name="text" placeholder="Send a new message">
+  </form>
+</template>
+
+<template name="message">
+  <li>{{text}}</li>
+</template>
