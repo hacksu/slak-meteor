@@ -1,0 +1,29 @@
+<head>
+  <title>Slak!</title>
+</head>
+
+<body>
+  <h1>Slack</h1>
+
+  {{> channels}}
+</body>
+
+<template name="channels">
+
+  <h2>Channels</h2>
+
+  <ul>
+    {{#each channels}}
+      {{> channel}}
+    {{/each}}
+  </ul>
+
+  <form>
+    <input type="text" name="channel" placeholder="Add a new channel">
+  </form>
+
+</template>
+
+<template name="channel">
+  <li><a href="{{_id}}">#{{name}}</a></li>
+</template>
