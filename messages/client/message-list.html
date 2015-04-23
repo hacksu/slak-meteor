@@ -1,0 +1,20 @@
+<template name="Chat">
+
+  {{> channels}}
+
+  <h2>Messages</h2>
+
+  {{#each messages}}
+    {{> message}}
+  {{/each}}
+
+  <form>
+    <input type="text" placeholder="Send a message" name="message">
+  </form>
+
+</template>
+
+<template name="message">
+  <p>{{text}}</p>
+  <button>Delete</button>
+</template>
